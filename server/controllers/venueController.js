@@ -1,14 +1,14 @@
 const items = {
-    title: "All Wedding Equipments",
+    title: "Venue Services",
     owner: "Tefera Jamu",
     address:{
         street: "321 Main St",
         City: "Frankfurt"    
     }
 }
-const homepage =async (req,res) => {
+const venue =async (req,res) => {
     const {title, owner} = items;
-    res.render('index', {title,owner});
+    res.render('venue', {title,owner});
 }
  
-module.exports = homepage;
+module.exports = venue;
