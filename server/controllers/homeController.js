@@ -1,14 +1,14 @@
-const items = {
-    title: "All Wedding Equipments",
-    owner: "Tefera Jamu",
-    address:{
-        street: "321 Main St",
-        City: "Frankfurt"    
-    }
-}
-const homepage =async (req,res) => {
-    const {title, owner} = items;
-    res.render('index', {title,owner});
-}
+const HomeModel = require("../models/CarSchema");
+
+const homepage = async (req, res) => {
+  try {
+    const title = "Newest Professionals and Service Providers";
+    const items = await HomeModel.find().sort({businessType:-1});
+    console.log(items);
+    res.render("index", { items,title });
+  } catch (err) {
+    console.log("Error: Professionals", err);
+  }
+};
  
 module.exports = homepage;

@@ -1,0 +1,126 @@
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #264653;
+    color: #fff;
+    font-style: 'Poppins', 'Roboto', sans-serif;
+    width:90%;
+    margin-left:5%;
+    height:auto;
+    padding:2vh;    
+    border-radius:10px;
+    border:outset;
+
+    .detailsHeading {
+        @include setDetailsStyles;
+        background-color:teal;
+        .detailsTitle{
+            width:60%;
+            .homeWebsite{
+                display:none;
+            }
+            .businessName{
+                margin-top:10px;
+                text-align:center;
+            }
+            .businessType{
+                text-align:center;
+            }
+        }
+        .detailsMainContact{
+            width:35%;
+            .social{
+                .socialMedia{
+                    text-align:right;
+                    background-color:blue;
+                    color:white;
+                    padding:2px 5px;
+                    font-size:20px;
+                    margin:0px;
+                    
+                }
+                
+            }
+            .telephoneNumber{
+                text-align:right;
+            }
+            .emailAddress{
+                text-align:right;
+            }
+        }
+     
+    }
+    .services{
+        @include setDetailsStyles;
+        width: 100%;
+        .serviceText{
+            width:40%;
+        }
+        .serviceImage{
+            width:55%;
+            img{
+                width:100%;
+                height:250px;
+            }
+        }
+        
+        
+        
+    }
+    .description{
+        @include setDetailsStyles;        
+        background-color:teal;
+        .descriptionImage{
+            width:55%;
+            img{
+                width:100%;
+                height:250px;
+            }
+        }
+        .descriptionText{
+            width:40%;
+        }
+       
+        
+        
+    }
+    .contactTheBusiness{
+        @include setDetailsStyles;
+        .contactForm{
+            width:40%;
+        }
+        .addressGoogleMap{
+            width:55%;
+            .googleMap{
+                width:100%;
+                height:250px;  
+            }
+        }
+        
+        
+        
+       
+    }
+    .social{
+        @include setDetailsStyles;
+        background-color:teal;
+        align-items:center;
+        
+        .onYouTubeTitle{
+            width:100%;
+            text-transform: capitalize;
+            text-align: center;
+            margin:10px;
+            padding:5px;
+        }
+        .onYouTube{
+            width:100%;
+            height:250px;
+        }
+        
+
+    }
+}

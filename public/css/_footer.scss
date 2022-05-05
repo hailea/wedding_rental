@@ -1,0 +1,31 @@
+footer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:$secColor;
+    color:$white;
+    border: outset;
+    margin:20px 2px;
+    padding:10px;
+    
+    .footerInfo{
+        display:flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items:center;
+        
+        .footerSection{
+            width:23%;
+            h3{
+                margin:5px 1px;
+                text-decoration: underline;
+            }
+        }
+    }
+    .footerCopyRight{
+        display:flex;
+        justify-content:center;
+        border-top:outset;
+        margin:20px;
+    }
+}

@@ -1,0 +1,34 @@
+<div class="cards">
+    <div class="titleContainer">
+        <h1 class="cardsTitle">
+            <%= locals.title || "Wedding Service Providers " %>
+        </h1>
+    </div>
+
+    <div class="cardContainer">
+        <% for(let item of items){%>
+
+            <div class="card">
+                <a href="<%=item._id%>" class="cardImageLink">
+                    <img src=<%=item.mainImage || "https://picsum.photos/400/300" %>
+                    class="cardImage" alt="<%= item.businessName || "Dani Wedding Services" %>" />
+                </a>
+
+                <h4 class="name">
+                    <%= item.businessName || "Dani Wedding Services" %>
+                </h4>
+                <h5 class="cityState">
+                    <%= item.city %> , <%= item.state %>
+                </h5>
+                <h5 class="type">
+                    <%= item.businessType || "Dani Company" %>
+                </h5>
+                <h5 class="availability">
+                    <%= item.availability ? "available" : "not available" %>
+                </h5>
+                <h6 class="star">*****</h6>
+                
+            </div>
+            <% } %>
+    </div>
+</div>

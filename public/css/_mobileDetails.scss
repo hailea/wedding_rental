@@ -1,0 +1,50 @@
+@media(max-width:957px){
+
+}
+@media(max-width:717px){
+    .details{
+        .detailsHeading{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            font-size:smaller;
+            .detailsMainContact{
+                align-items:flex-end; 
+                width:100%; 
+                .social{
+                    .socialMedia{
+                        margin:0px;
+                    }
+                    
+                }          
+            }
+        }
+        .services{
+            display:flex;
+            flex-direction:column;
+            .serviceImage{
+                width:100%;
+            }
+
+        }
+        .description{
+            display:flex;
+            flex-direction:column-reverse;
+            .descriptionImage{
+                width:100%;
+            }
+        }
+        .contactTheBusiness{
+            display:flex;
+            flex-direction:column;
+            .contactForm{
+                width:100%;
+            }
+            .addressGoogleMap{
+                width:100%;
+            }
+             
+        }
+    }
+}

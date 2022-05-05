@@ -1,0 +1,64 @@
+<div class="details">
+  <div class="detailsHeading">
+    <div class="detailsTitle">
+      <div class="homeWebsite">
+        <a href="/">Go Back Home</a>
+      </div>
+      <h1 class="businessName">
+        <%= item.businessName %>
+      </h1>
+      <h5 class="businessType"><%= item.businessType %></h5>
+    </div>
+    <div class="detailsMainContact">
+      
+      <div class="telephoneNumber">
+        <i class="fa fa-phone"></i> <%= item.phone || 720-234-5678 %>
+      </div>
+      <div class="emailAddress">
+        <i class="fa-solid fa-envelope"></i>abcd@yahoo.com
+      </div>
+      <div class="social">
+        <a class="facebook socialMedia" href="http://www.facebook.com"> <i class="faFacebook fa-brands fa-facebook"></i></a> 
+        <a class="twitter socialMedia" href="http://www.facebook.com"><i class="faTwitter fab fa-twitter-square"></i></a> 
+        <a class="tiktok socialMedia" href="http://www.facebook.com"> <i class="faTiktok fab fa-tiktok"></i></a> 
+        <a class="instagram socialMedia" href="http://www.facebook.com"> <i class="faInstagram fab fa-instagram"></i></a> 
+      </div>
+    </div>
+  </div>
+
+  <div class="services">
+    <div class="serviceText">
+      <h3>Services</h3>
+    </div>
+    <div class="serviceImage">
+      <img src=<%=item.mainImage || "https://picsum.photos/800/300" %> alt="myimages" />
+    </div>
+  </div>
+  <div class="description">
+    <div class="descriptionImage">
+      <img src=<%=item.mainImage || "https://picsum.photos/400/300" %> alt="myimages" />
+    </div>
+    <div class="descriptionText">
+      <h3>Description</h3>
+    </div>
+  </div>
+
+  <div class="contactTheBusiness">
+    <div class="contactForm">
+      <form action="">
+        
+        <input type="text" name="" id="" />
+      </form>
+    </div>
+    <div class="addressGoogleMap">
+      <img class="googleMap" src=<%=item.mainImage || "https://picsum.photos/400/300" %> alt="myimages" />
+    </div>
+  </div>
+  <div class="social">
+    <h3 class="onYouTubeTitle">Watch Detail Information About <%= item.businessName %></h3>
+    <iframe class="onYouTube" src="https://www.youtube.com/embed/eMisIQLOMbE" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+
+  </div>
+</div>

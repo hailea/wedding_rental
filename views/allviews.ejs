@@ -1,0 +1,114 @@
+//details page draft
+
+<!-- 
+<row class="row bg-secondary px-1 border border-dark mx-auto justify-content-center">
+    <div class="m-3 g-3 card bg-dark text-white">
+        <img src="./img/bk.jpg" class="card-img img-fluid detailsCustomImage" alt="...">
+        <div class="card-img-overlay">
+            <div class="detailTexts bg-dark shadow-lg">
+                <h3 class="display-5 card-title"><%= item.businessName %>  </h3>
+                <hr>
+                <div class="bg-success headerTextCenter">Price: $<%= item.price %> per day </div>
+                <ul>Features: 
+                    <li><%= item.features[0]%></li>
+                    <li><%= item.features[1]%></li>
+                    <li><%= item.features[2]%></li>
+                </ul>
+                <hr />
+                <div class="card-text">
+                    <h5>Description</h5>
+                    <p><%= item.description %></p>
+                </div>
+                <hr />
+                <div class="card-text">
+                    <h5>Contact us</h5>
+                   <address>
+                     <div>
+                      <%= item.streetAddress %> <br />
+                      <%= item.city %> <br />
+                      <%= item.state %> <br />
+                      <%= item.zipCode %> <br />
+                      <hr />
+                      <%= item.emailAddress %> <br />
+                      <%= item.telephoneNumber %> <br />
+
+                     </div>
+                    
+                   </address>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel slide" id="carouselExampleCaptions" data-bs-ride="carousel">
+        <div class="carousel-
+        indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/img (2).jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="bg-secondary headerTextCenter mx-auto">First slide label</h5>
+              <p  class="bg-secondary paragraphTextCenter mx-auto">Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/img (5).jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="bg-secondary headerTextCenter mx-auto">Second slide label</h5>
+              <p class="bg-secondary paragraphTextCenter mx-auto">Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/img (11).jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="bg-secondary headerTextCenter mx-auto">Third slide label</h5>
+              <p class="bg-secondary paragraphTextCenter mx-auto">Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
+    </row> -->
+
+//All views draft
+<!-- <div class="row m-3">
+  <h1 class="text-center text-danger">
+    <%= locals.title || "Wedding Service Providers " %>
+  </h1>
+  <% for(let item of items){%>
+    <div
+      class="card d-flex justify-content-evenly shadow-lg col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-2 m-2">
+      <h5 class="card-title text-primary text-center">
+        <%= item.businessName || "Dani Wedding Services" %>
+      </h5>
+      <a href="<%=item._id%>">
+        <img src=<%=item.mainImage || "https://picsum.photos/400/300" %> width="400px" height="300px"
+        class="card-img-top image-fluid" alt="Heros Image" />
+      </a>
+      <div class="card-body">
+        <h5 class="card-title text-primary text-center">
+          <%= item.businessType || "Dani Company" %>
+        </h5>
+        <p>
+          <%= item.features || "Client is responsible for decoration" %>
+        </p>
+        <h5>
+          <%= item.availability || "Biamesa Rental Company" %>
+            </h4>
+            <a href="<%=item._id%>" class="btn btn-primary">Go to Details</a>
+
+      </div>
+    </div>
+    <% } %>
+</div> -->

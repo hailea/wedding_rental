@@ -1,17 +1,269 @@
-<div class="row m-3">
-    <div class="card" style="width: 18rem;">
-        <img src="https://picsum.photos/600/300" width="500px" height="300px" class="card-img-top" alt="Heros Image">
-        <div class="card-body">
-          <h3 class="card-title text-primary text-center"><%= locals.title || "Dani Decoration Company"%> </h3>
-          <h5><%= locals.name || "Biamesa Rental Company" %></h4>
-          <h5><%= locals.owner || "Biamesa Rental Company" %> </h4>
-          <p class="card-text">
-              <%= locals.description || "Some quick example text to build on the card title and make up the bulk of the card's content." %> 
-          </p>
-          <a href="#" class="btn btn-primary">Go to Details</a>
+<div class="addNewItem">
+    <h3>Add Your Business to The Directory</h3>
+    <form action="/" method="post" class="newItem">
+        <div class="businessGeneralInfo">
+            <h3>Business General Information</h3>
+            <div class="businessName">
+                <label for="title" class="form-label">Business Name: </label>
+                <input type="text" id="title" class="businessNameInput" name="businessName">
+            </div>
+            <label>Business Type: (Choose One of Them) </label>
+            <div class="businessType">
+                <div>
+                    <input type="radio" checked name="businessType" id="businessType1" checked>
+                    <label for="businessType1">
+                        Wedding Car Rental
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" name="businessType" id="businessType2">
+                    <label for="businessType2">
+                        Wedding Venue Rental
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" name="businessType" id="businessType3">
+                    <label for="businessType3">
+                        Catering Services
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" name="businessType" id="businessType4">
+                    <label for="businessType4">
+                        Photography Services
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" name="businessType" id="businessType5">
+                    <label for="businessType5">
+                        Wedding Planner Professional
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" name="businessType" id="businessType6">
+                    <label for="businessType6">
+                        DJ
+                    </label>
+                </div>
+
+            </div>
+            <div class="businessPrice">
+                <label for="phone">Price per day :</label> $
+                <input type="text" class="businessPriceInput" id="price" name="price" pattern="[0-9]{1-5}"
+                    placeholder="0000">.00
+            </div>
+            <div class="businessTel">
+                <label for="phone">Business phone number:</label>
+                <input type="tel" class="businessTelInput" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    placeholder="xxx-xxx-xxxx">
+            </div>
+            <div class="businessEmail">
+                <label for="email">Business Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="abc@mail.com" class="businessEmailInput">
+            </div>
+            <div class="businessServices">
+                <label for="features" class="form-label">Name Three/Four Majour Services That You Deliver To Your
+                    Customers</label>
+                <div>
+                    <textarea type="text" id="features" class="form-control" name="services"></textarea>
+                </div>
+            </div>
+            <div class="businessDescription">
+                <label for="description" class="form-label">Describe Your Business</label>
+                <div>
+                    <textarea type="text" id="description" class="form-control" name="description"></textarea>
+                </div>
+            </div>
+
+
+
+
         </div>
-      </div>
-    
-    
-    
+        <!-- social media design -->
+        <div class="businessSocialMediaPages">
+            <h3>Business Social Media Pages</h3>
+
+            <div class="businessInstagramPage">
+                <label for="instagram" class="form-label">Instagram Address: </label><br />
+                <input type="text" id="instagram" placeholder="https://www.instagram.com/explore/tags/wedding/?hl=en"
+                    class="businessNameInput" name="businessInstagramPage">
+            </div>
+            <div class="businessFacebookPage">
+                <label for="facebook" class="form-label">Facebook Address: </label><br />
+                <input type="text" id="facebook" placeholder="https://www.facebook.com/weddingideasmagazine/"
+                    class="businessNameInput" name="businessFacebookPage">
+            </div>
+            <div class="businessYouTubePage">
+                <label for="youtube" class="form-label">YouTube Address: </label><br />
+                <input type="text" id="youtube" placeholder="https://www.youtube.com/watch?v=UHH_dOUUd3w"
+                    class="businessNameInput" name="businessYouTubePage">
+            </div>
+            <div class="businessTwitterPage">
+                <label for="twitter" class="form-label">Twitter Address: </label><br />
+                <input type="text" id="twitter" placeholder="https://twitter.com/hertz?lang=en"
+                    class="businessNameInput" name="businessTwitterPage">
+            </div>
+            <div class="businessTiktokPage">
+                <label for="tiktok" class="form-label">Tiktok Address: </label><br />
+                <input type="text" id="tiktok" placeholder="https://www.tiktok.com/@wedding_world"
+                    class="businessNameInput" name="businessTiktokPage">
+            </div>
+        </div>
+        <!-- images design -->
+        <div class="businessImages">
+            <h3>Business Social Media Pages</h3>
+            <div class="mainImage">
+                <label for="mainPageImage" class="form-label">Main Image: </label><br />
+                <input type="file" id="mainPageImage" name="mainImage">
+            </div>
+            <div class="serviceImage">
+                <label for="serviceImage" class="form-label">An Image That Describes Your Service: </label><br />
+                <input type="file" id="serviceImage" name="serviceImage">
+            </div>
+            <div class="descriptionImage">
+                <label for="descriptionImage" class="form-label">A Second Image That Describes Your Service:
+                </label><br />
+                <input type="file" id="descriptionImage" name="descriptionImage">
+            </div>
+        </div>
+
+        <div class="businessContactAddress">
+            <h3>Address</h3>
+            <div class="streetAddress">
+                <label for="streetAddress" class="form-label">Street Address: </label><br />
+                <input type="text" id="streetAddress" placeholder="123 Main Ave" class="businessNameInput"
+                    name="streetAddress">
+            </div>
+            <div class="city">
+                <label for="city" class="form-label">City: </label><br />
+                <input type="text" id="city" placeholder="Denver" class="businessNameInput" name="city">
+            </div>
+            <div class="state">
+                <label for="state" class="form-label">State: </label><br />
+                <input type="text" id="state" placeholder="Colorado" class="businessNameInput" name="state">
+            </div>
+            <div class="country">
+                <label for="country" class="form-label">Country: </label><br />
+                <input type="text" id="country" placeholder="USA" class="businessNameInput" name="country">
+            </div>
+            <div class="zipcode">
+                <label for="zipcode" class="form-label">Zip code : </label><br />
+                <input type="text" id="zipcode" placeholder="70245" class="businessNameInput" name="zipcode">
+            </div>
+        </div>
+        <div class="submitForm">
+                <button class="submitFormBtn">Submit</button>
+        </div>
+
+    </form>
 </div>
+<!-- <div class="row my-1 mx-3 w-75">
+    <div class="col m-1">
+        <h5 class="h1 text-center text-info">Submit Your Services </h5>
+        <form action="/" method="post">
+            <div class="mb-1">
+                <label for="title" class="form-label">Business Name</label>
+                <input type="text" id="title" class="form-control" name="businessName">
+            </div>
+            <div class="mb-1">
+                <label for="mainImage" class="form-label">Main Image</label>
+                <input type="text" id="mainImage" class="form-control" name="mainImage">
+            </div>
+            <label>Business Type</label>
+            <div class="mb-1 mx-4">                
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="businessType" id="businessType1">
+                        <label class="form-check-label" for="businessType1">
+                            Wedding Car Rental
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="businessType" id="businessType2">
+                        <label class="form-check-label" for="businessType2">
+                            Wedding Wenue Rental
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="businessType" id="businessType3">
+                        <label class="form-check-label" for="businessType3">
+                            Catering Services
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="businessType" id="businessType4">
+                        <label class="form-check-label" for="businessType4">
+                            Photography Services
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="businessType" id="businessType5">
+                        <label class="form-check-label" for="businessType5">
+                            Wedding Planner Professional
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="businessType" id="businessType6">
+                        <label class="form-check-label" for="businessType6">
+                            DJ
+                        </label>
+                    </div>
+
+            </div>
+            <div class="mb-1">
+                <label for="features" class="form-label">Features</label>
+                <textarea type="text" id="features" class="form-control" name="features[]"></textarea>
+            </div>
+            <label>Availability</label>
+            <div class="mb-1 mx-4">
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="availability" id="availability1" checked>
+                    <label class="form-check-label" for="availability1">
+                        Yes - it is available
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="availability" id="availability2">
+                    <label class="form-check-label" for="availability2">
+                        No - but will be available soon.
+                    </label>
+                </div>
+            </div>
+            <div class="mb-1">
+                <label for="description" class="form-label">Description</label>
+                <textarea type="text" id="description" class="form-control" name="description"></textarea>
+            </div>
+            <div class="mb-1">
+                <label for="internalSideImages" class="form-label">Internal Side Images</label>
+                <input type="text" id="internalSideImages" class="form-control" name="internalSideImages">
+            </div>
+            <div class="mb-1">
+                <label for="externalSideImages" class="form-label">External Side Images</label>
+                <input type="text" id="externalSideImages" class="form-control" name="externalSideImages">
+            </div>
+            <div class="mb-1">
+                <label for="prices" class="form-label">Prices</label>
+                <input type="text" id="prices" class="form-control" name="prices">
+            </div>
+            <div class="mb-1">
+                <label for="streetAddress" class="form-label">Street Address</label>
+                <input type="text" id="streetAddress" class="form-control" name="streetAddress">
+            </div>
+            <div class="mb-1">
+                <label for="city" class="form-label">City</label>
+                <input type="text" id="city" class="form-control" name="city">
+            </div>
+            <div class="mb-1">
+                <label for="state" class="form-label">State</label>
+                <input type="text" id="state" class="form-control" name="state">
+            </div>
+            <div class="mb-1">
+                <label for="zipCode" class="form-label">Zip Code</label>
+                <input type="text" id="zipCode" class="form-control" name="zipCode">
+            </div>
+            <div class="mb-1 text-center">
+                <button class="btn btn-info">Add New Business</button>
+            </div>
+        </form>
+    </div>
+</div> -->

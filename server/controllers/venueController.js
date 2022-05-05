@@ -1,14 +1,12 @@
-const items = {
-    title: "Venue Services",
-    owner: "Tefera Jamu",
-    address:{
-        street: "321 Main St",
-        City: "Frankfurt"    
-    }
-}
-const venue =async (req,res) => {
-    const {title, owner} = items;
-    res.render('venue', {title,owner});
-}
- 
+const VenueModel = require("../models/CarSchema");
+
+const venue = async (req, res) => {
+  try {
+    const title = "Wedding Venues/Hall Providers";
+    const items = await VenueModel.find();
+    res.render("card", { items, title });
+  } catch (err) {
+    console.log("Error: Venue", err);
+  }
+};
 module.exports = venue;

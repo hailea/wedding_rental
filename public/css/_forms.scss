@@ -1,0 +1,40 @@
+.forms{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+     background-color:$secColor;
+     color:$white;
+    @include setFormStyle(outset);
+    h3{
+        text-align:center;
+        text-transform:capitalize;
+        margin:5px;
+        text-decoration: underline;
+        width:100%;
+    }
+    form{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        .contactInput{
+            .contactSection{
+                // margin:10px 20px;
+                // width:100%;
+                .inputContactStyle{
+                    @include inputTextboxStyle;
+                }
+                .textareaContactStyle{
+                    @include textareaStyle(100%);
+                }
+            }            
+            
+        }
+        .contactSubmit{
+            .btnContact{
+                @include btnStyle(outset);
+            }
+        }
+    }
+    
+}

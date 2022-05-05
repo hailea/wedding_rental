@@ -1,14 +1,13 @@
-const items = {
-    title: "Catering Services",
-    owner: "Tefera Jamu",
-    address:{
-        street: "321 Main St",
-        City: "Frankfurt"    
-    }
-}
-const catering =async (req,res) => {
-    const {title, owner} = items;
-    res.render('catering', {title,owner});
-}
+const CateringModel = require("../models/CarSchema");
+
+const catering = async (req, res) => {
+  try {
+    const title = "Catering Services";
+    const items = await CateringModel.find({businessType:"catering"});
+    res.render("card", { items, title });
+  } catch (err) {
+    console.log("Error: Catering", err);
+  }
+};
  
 module.exports = catering;

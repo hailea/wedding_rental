@@ -1,17 +1,29 @@
-<div class="row m-3">
-    <div class="card" style="width: 18rem;">
-        <img src="https://picsum.photos/600/300" width="500px" height="300px" class="card-img-top" alt="Heros Image">
-        <div class="card-body">
-          <h3 class="card-title text-primary text-center"><%= locals.title || "Dani Decoration Company"%> </h3>
-          <h5><%= locals.name || "Biamesa Rental Company" %></h4>
-          <h5><%= locals.owner || "Biamesa Rental Company" %> </h4>
-          <p class="card-text">
-              <%= locals.description || "Some quick example text to build on the card title and make up the bulk of the card's content." %> 
-          </p>
-          <a href="#" class="btn btn-primary">Go to Details</a>
+<div class="forms">
+    <h3>Contact the Owner of this Site</h3>
+    <form action="mailto:hai2ab@yahoo.com" method="POST" enctype="multipart/form-data" name="EmailForm">
+        <div class="contactInput">
+            <div class="contactSection">
+                <label for="fullName" class="form-label">Full Name: </label><br />
+                <input type="text" id="fullName" placeholder="Joe Doe" class="inputContactStyle" name="fullName">
+            </div>
+            <div class="contactSection">
+                <label for="email" class="form-label">Email: </label><br />
+                <input type="email" id="email" placeholder="joe@email.com" class="inputContactStyle" name="email">
+            </div>
+            <div class="contactSection">
+                <label for="phoneNumber" class="form-label">Tel: </label><br />
+                <input type="tel" id="phoneNumber" class="inputContactStyle" name="phoneNumber" placeholder="xxx-xxx-xxxx">
+            </div>
+            <div class="contactSection">
+                <label for="comments" class="form-label">Your Comments</label>
+                <div>
+                    <textarea type="text" id="comments" class="textareaContactStyle" name="comments" >comments ....</textarea>
+                </div>
+            </div>
         </div>
-      </div>
-    
-    
-    
+        <div class="contactSubmit">
+            <button class="btnContact">Send</button>
+        </div>
+    </form>
+
 </div>

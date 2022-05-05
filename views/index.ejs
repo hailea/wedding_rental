@@ -1,20 +1,6 @@
 <div class="row">
     <%-include('./partials/heros') %> 
 </div>
-<div class="row m-3">
-    <div class="card" style="width: 18rem;">
-        <img src="https://picsum.photos/600/300" width="500px" height="300px" class="card-img-top" alt="Heros Image">
-        <div class="card-body">
-          <h3 class="card-title text-primary text-center"><%= locals.title || "Dani Decoration Company"%> </h3>
-          <h5><%= locals.name || "Biamesa Rental Company" %></h4>
-          <h5><%= locals.owner || "Biamesa Rental Company" %> </h4>
-          <p class="card-text">
-              <%= locals.description || "Some quick example text to build on the card title and make up the bulk of the card's content." %> 
-          </p>
-          <a href="#" class="btn btn-primary">Go to Details</a>
-        </div>
-      </div>
-    
-    
-    
+<div class="row">
+  <%-include('./card') %> 
 </div>

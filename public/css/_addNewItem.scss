@@ -1,0 +1,106 @@
+.addNewItem{
+    background-color: $secColor;
+    color:$white;
+    border:outset;
+    font-size:1em;
+    margin:10px;
+    border-radius:10px;
+    h3{
+        text-align:center;
+        margin:10px;
+        text-decoration: underline;
+    }
+    .newItem{
+        //general info
+        .businessGeneralInfo{
+            @include setFormStyle(outset);
+            .businessName{
+                .businessNameInput{
+                    @include inputTextboxStyle;
+                }
+            }            
+            .businessType{
+                margin-left: 20px;
+            }
+            .businessPrice{
+                .businessPriceInput{
+                    width:60px; 
+                    height:24px;
+                    text-align: right;
+                    border:inset;
+
+                }
+                
+            }
+            .businessTel{
+                .businessTelInput{
+                    @include inputTextboxStyle;
+                }
+            }
+            .businessEmail{
+                .businessEmailInput{
+                    @include inputTextboxStyle;
+                }
+            }
+        }  
+        // socialmedia      
+        .businessSocialMediaPages{
+            @include setFormStyle(inset);
+
+            .businessFacebookPage{
+                .businessNameInput{
+                    @include inputTextboxStyle;
+                }
+            }
+            .businessYouTubePage{
+                .businessNameInput{
+                    @include inputTextboxStyle;
+                }
+            }
+            .businessTwitterPage{
+                .businessNameInput{
+                    @include inputTextboxStyle;
+                }
+            }
+            .businessTiktokPage{
+                .businessNameInput{
+                    @include inputTextboxStyle;
+                }
+            }
+            .businessInstagramPage{
+                .businessNameInput{
+                    @include inputTextboxStyle;
+                }
+            }
+        }
+        // images
+        .businessImages{
+            @include setFormStyle(outset);
+            div{
+                margin:20px;
+            }
+        }
+        // address
+        .businessContactAddress{
+            @include setFormStyle(inset);
+            .businessNameInput{
+                @include inputTextboxStyle;
+            }
+        }
+        //submit button styles
+        .submitForm{
+            @include setFormStyle(inset);
+            display:flex;
+            justify-content:center;
+            .submitFormBtn{
+               @include btnStyle(outset);
+            }
+        }
+        textarea{
+            @include textareaStyle(90%);
+        }
+        
+    
+    }
+   
+}

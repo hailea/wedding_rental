@@ -1,0 +1,56 @@
+$fontStack: Arial, Helvetica, sans-serif;
+$mainColor:#2d6a4f;
+$secColor:#264653;
+$heroTitle:#ff0000;
+$white:#FFFFFF;
+$black:#000000;
+$link-menu-hover:#0012de;
+$button-Hover-Color:#edf2f4;
+$btn-primary:blue;
+$btn-info:gray;
+$btn-color:$white;
+
+@mixin setDetailsStyles{
+    display:flex;
+    width:100%;
+    justify-content:space-between;
+    margin:10px 12px 10px 2px; 
+    padding:5px;
+    flex-wrap: wrap;
+    border-radius:10px;
+    border:outset;
+}
+@mixin setFormStyle($borderStyle) {
+    border: $borderStyle;      
+    border-radius: 10px;
+    min-height: 120px;
+    margin:10px;
+    padding:10px;
+}
+@mixin  inputTextboxStyle {
+    width:300px;
+    height:30px;
+    border:inset;
+    margin:5px 0px;
+    font-size: 1em;
+
+}
+@mixin btnStyle($btnborderStyle){
+    width:150px;
+    height:50px;
+    border:$btnborderStyle;
+    border-radius: 7px;
+    margin:10px;
+    background-color:$secColor;
+    color:white;
+    font-size: 1.2em;
+}
+
+@mixin textareaStyle($width){
+    width:$width;
+    min-height: 100px;
+    margin: 10px 20px;
+    border:inset;
+    font-size: 1.2em;
+    
+}
