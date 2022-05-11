@@ -105,7 +105,7 @@ body {
 
 .header .navbar .search button:hover {
   background-color: #edf2f4;
-  width: 115px;
+  width: 112px;
   height: 35px;
 }
 
@@ -765,14 +765,16 @@ footer .footerCopyRight {
 }
 
 .forms form .contactSubmit .btnContact {
-  width: 150px;
-  height: 50px;
+  height: 30px;
+  width: 110px;
   border: outset;
   border-radius: 7px;
-  margin: 10px;
-  background-color: #264653;
-  color: white;
-  font-size: 1.2em;
+}
+
+.forms form .contactSubmit .btnContact:hover {
+  background-color: #edf2f4;
+  width: 112px;
+  height: 35px;
 }
 
 .addNewItem {
@@ -924,14 +926,16 @@ footer .footerCopyRight {
 }
 
 .addNewItem .newItem .submitForm .submitFormBtn {
-  width: 150px;
-  height: 50px;
+  height: 30px;
+  width: 110px;
   border: outset;
   border-radius: 7px;
-  margin: 10px;
-  background-color: #264653;
-  color: white;
-  font-size: 1.2em;
+}
+
+.addNewItem .newItem .submitForm .submitFormBtn:hover {
+  background-color: #edf2f4;
+  width: 112px;
+  height: 35px;
 }
 
 .addNewItem .newItem textarea {

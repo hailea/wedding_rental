@@ -92,9 +92,19 @@
             @include setFormStyle(inset);
             display:flex;
             justify-content:center;
-            .submitFormBtn{
-               @include btnStyle(outset);
+            .submitFormBtn {
+                height: 30px;
+                width: 110px;
+                border: outset;
+                border-radius: 7px;
             }
+
+            .submitFormBtn:hover {
+                background-color: $button-Hover-Color;
+                width: 112px;
+                height: 35px;
+            }
+            
         }
         textarea{
             @include textareaStyle(90%);

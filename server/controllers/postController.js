@@ -3,18 +3,28 @@ const CarModel = require("../models/CarSchema");
 const posts = async (req, res) => {
   const car = new CarModel({
     businessName: req.body.businessName,
-    mainImage: req.body.mainImage,
     businessType: req.body.businessType,
-    features: req.body.features,
-    availability: req.body.availability,
-    description:req.body.description,
-    internalSideImages: req.body.internalSideImages,
-    externalSideImages: req.body.externalSideImages,
-    prices: req.body.prices,
-    streetAddress:req.body.streetAddress,
-    city:req.body.city,
-    state:req.body.state,
-    zipCode:req.body.zipCode
+    price: req.body.price,
+    phone: req.body.phone,
+    email: req.body.email,
+    services: req.body.services,
+    description: req.body.description,
+    
+    businessInstagramPage: req.body.businessInstagramPage,
+    businessFacebookPage: req.body.businessFacebookPage,
+    businessYouTubePage: req.body.businessYouTubePage,
+    businessTwitterPage: req.body.businessTwitterPage,
+    businessTiktokPage: req.body.businessTiktokPage,
+    
+    mainImage: req.body.mainImage,
+    serviceImage: req.body.serviceImage,
+    descriptionImage: req.body.descriptionImage,
+    
+    streetAddress: req.body.streetAddress,
+    city: req.body.city,
+    state: req.body.state,
+    country: req.body.country,
+    zipcode: req.body.zipcode
   });
   try {
     const savedCar = await car.save();

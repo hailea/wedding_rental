@@ -31,9 +31,19 @@
             
         }
         .contactSubmit{
-            .btnContact{
-                @include btnStyle(outset);
+            .btnContact {
+                height: 30px;
+                width: 110px;
+                border: outset;
+                border-radius: 7px;
             }
+
+            .btnContact:hover {
+                background-color: $button-Hover-Color;
+                width: 112px;
+                height: 35px;
+            }
+            
         }
     }
     
